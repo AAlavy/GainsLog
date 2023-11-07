@@ -1,0 +1,135 @@
+{
+  "Name": "Andys Program",
+  "Days": [
+    {
+      "Day": "Monday",
+      "Exercises": [
+        {
+          "Name": "Bench Press",
+          "Sets": 5,
+          "Reps": 5
+        },
+        {
+          "Name": "Barbell Rows",
+          "Sets": 5,
+          "Reps": 5
+        },
+        {
+          "Name": "Incline Dumbell Press",
+          "Sets": 4,
+          "Reps": 12
+        },
+        {
+          "Name": "Pull Ups",
+          "Sets": 3,
+          "Reps": 10
+        },
+        {
+          "Name": "Overhead Press",
+          "Sets": 3,
+          "Reps": 10
+        },
+        {
+          "Name": "Skull Crushers",
+          "Sets": 3,
+          "Reps": 12
+        },
+        {
+          "Name": "EZ Curls",
+          "Sets": 3,
+          "Reps": 10
+        }
+      ]
+    },
+    {
+      "Day": "Tuesday",
+      "Exercises": [
+        {
+          "Name": "Squat",
+          "Sets": 5,
+          "Reps": 5
+        },
+        {
+          "Name": "Deadlift",
+          "Sets": 3,
+          "Reps": 5
+        },
+        {
+          "Name": "Bulgarian Split Squat",
+          "Sets": 3,
+          "Reps": 10
+        },
+        {
+          "Name": "Hamstring Curl",
+          "Sets": 3,
+          "Reps": 12
+        }
+      ]
+    },
+    {
+      "Day": "Thursday",
+      "Exercises": [
+        {
+          "Name": "Bench Press",
+          "Sets": 5,
+          "Reps": 5
+        },
+        {
+          "Name": "Barbell Rows",
+          "Sets": 5,
+          "Reps": 5
+        },
+        {
+          "Name": "Incline Dumbell Press",
+          "Sets": 4,
+          "Reps": 12
+        },
+        {
+          "Name": "Pull Ups",
+          "Sets": 3,
+          "Reps": 10
+        },
+        {
+          "Name": "Overhead Press",
+          "Sets": 3,
+          "Reps": 10
+        },
+        {
+          "Name": "Skull Crushers",
+          "Sets": 3,
+          "Reps": 12
+        },
+        {
+          "Name": "EZ Curls",
+          "Sets": 3,
+          "Reps": 10
+        }
+      ]
+    },
+    {
+      "Day": "Saturday",
+      "Exercises": [
+        {
+          "Name": "Squat",
+          "Sets": 5,
+          "Reps": 5
+        },
+        {
+          "Name": "Deadlift",
+          "Sets": 3,
+          "Reps": 5
+        },
+        {
+          "Name": "Bulgarian Split Squat",
+          "Sets": 3,
+          "Reps": 10
+        },
+        {
+          "Name": "Hamstring Curl",
+          "Sets": 3,
+          "Reps": 12
+        }
+      ]
+    }
+  ]
+}

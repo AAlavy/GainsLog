@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test.WorkoutPage"
+             Title="WorkoutPage"
+             BackgroundColor="White"
+             >
+    <VerticalStackLayout>
+        <Label
+            x:Name="workoutTimerDisplay"
+            Text="00:00:00"
+            Grid.Row="0" 
+            Grid.Column="0"
+            TextColor="Black"
+            />
+
+        <ImageButton
+            x:Name="stopWorkoutButton"
+            Grid.Row="0"
+            Grid.Column="0"
+            Clicked="onStopWorkout"
+            Source="stop_icon.png"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent"
+            BorderWidth="0" 
+            CornerRadius="0" 
+            Padding="0" 
+            HeightRequest="30"
+            WidthRequest="30"
+            />
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
