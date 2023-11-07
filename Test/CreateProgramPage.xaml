@@ -2,10 +2,84 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Test.CreateProgramPage"
-             Title="CreateProgramPage">
-    <VerticalStackLayout x:Name="Layout">
+             Title="CreateProgramPage"
+             BindingContext="Binding">
+    <Grid BackgroundColor="#f7f7f7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
 
-        <Frame x:Name="myFrame" BackgroundColor="LightBlue" CornerRadius="10" Padding="10" Margin="20" HeightRequest="50" WidthRequest="50">
+        <VerticalStackLayout>
+            <Button x:Name="btnMon"
+                    Text="Monday"
+                    Clicked="btnDay_Clicked" />
+            <Button x:Name="btnTue"
+                    Text="Tuesday"
+                    Clicked="btnDay_Clicked" />
+            <Button x:Name="btnWed"
+                    Text="Wednesday"
+                    Clicked="btnDay_Clicked" />
+            <Button x:Name="btnThu"
+                    Text="Thursday"
+                    Clicked="btnDay_Clicked" />
+            <Button x:Name="btnFri"
+                    Text="Friday"
+                    Clicked="btnDay_Clicked" />
+            <Button x:Name="btnSat"
+                    Text="Saturday"
+                    Clicked="btnDay_Clicked" />
+            <Button x:Name="btnSun"
+                    Text="Sunday"
+                    Clicked="btnDay_Clicked" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Column="1">
+            <Picker x:Name="picker"
+                    Title="Select an Exerceise"
+                    ItemsSource="{Binding ExercisePickerCollection}"
+                    SelectedItem="Picker_ItemSelected">
+            </Picker>
+			<Label Text="Enter number of sets:"/>
+			<Entry x:Name="entrySet" />
+			<Label Text="Enter number of reps:"/>
+			<Entry x:Name="entryRep" />
+			<Button x:Name="btnSubmit"
+					Text="Submit"
+					Clicked="btnSubmit_Clicked"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Column="2">
+
+			<ListView  ItemsSource="{Binding ExerciseCollection}"
+					   ItemSelected="ListView_ItemSelected">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid Padding="10">
+								<Label Text="{Binding Exercise}"
+									   FontSize="20"
+									   FontAttributes="Bold" />
+								<Label Text="{Binding Reps}"
+	                                   FontSize="20"
+	                                   FontAttributes="Bold" />
+								<Label Text="{Binding Sets}"
+	                                   FontSize="20"
+	                                   FontAttributes="Bold" />
+							</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
+    
+    
+<!--
+    
+            <Frame x:Name="myFrame" BackgroundColor="LightBlue" CornerRadius="10" Padding="10" Margin="20" HeightRequest="50" WidthRequest="50">
             <Frame.GestureRecognizers>
                 <DragGestureRecognizer DragStarting="OnDrag" />
             </Frame.GestureRecognizers>
@@ -17,6 +91,6 @@
             </Frame.GestureRecognizers>
             <Label Text="Drop here!" />
         </Frame>
-
-    </VerticalStackLayout>
-</ContentPage>
+    
+    
+    !-->
