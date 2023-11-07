@@ -55,6 +55,7 @@
 
 	<ItemGroup>
 	  <MauiAsset Include="Resources\Exercises\Exercises.json" />
+	  <MauiAsset Include="Resources\Programs\" />
 	</ItemGroup>
 
 	<ItemGroup>
