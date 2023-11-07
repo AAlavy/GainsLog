@@ -14,7 +14,7 @@ public class Days
     public List<Exercise> Exercises { get; set; }
 }
 
-public class Program
+public class WorkoutProgram
 {
     public string Name { get; set; }
     public List<Days> Days { get; set; }

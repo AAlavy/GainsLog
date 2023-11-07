@@ -1,6 +1,5 @@
+using System.Diagnostics;
 using System.Text.Json;
-using System.IO;
-using Microsoft.Maui.Graphics;
 
 namespace Test;
 
@@ -9,6 +8,7 @@ public partial class Programs : ContentPage
     public Programs()
     {
         InitializeComponent();
+        LoadPrograms();
     }
 
     private void LoadPrograms()
@@ -18,10 +18,9 @@ public partial class Programs : ContentPage
         foreach (string file in files)
         {
             string json = File.ReadAllText(file);
-            Program program = JsonSerializer.Deserialize<Program>(json);
+            WorkoutProgram program = JsonSerializer.Deserialize<WorkoutProgram>(json);
             ProgramGrid.Children.Add(new Label { 
-                Text = program.Name,
-                Grid.row = 
+                Text = program.Name
             });
 
         }
