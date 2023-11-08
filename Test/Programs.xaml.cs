@@ -54,8 +54,6 @@ public partial class Programs : ContentPage
 
             workoutFrame.GestureRecognizers.Add(programTap);
 
-
-
             ProgramGrid.Children.Add(workoutFrame);
 
         }
