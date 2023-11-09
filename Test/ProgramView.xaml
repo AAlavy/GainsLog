@@ -6,6 +6,9 @@
              BackgroundColor="White"
              >
     <VerticalStackLayout x:Name="ViewProgram">
-        
+        <Button 
+            Text="Select Program"
+            Clicked="SelectProgram"
+            />
     </VerticalStackLayout>
 </ContentPage>

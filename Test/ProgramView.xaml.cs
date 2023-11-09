@@ -4,16 +4,18 @@ public partial class ProgramView : ContentPage
 {
 
     private WorkoutProgram program;
+    private string programPath;
     public ProgramView()
     {
         InitializeComponent();
     }
 
-    public ProgramView(WorkoutProgram program)
+    public ProgramView(WorkoutProgram program, string programPath)
     {
         InitializeComponent();
 
         this.program = program;
+        this.programPath = programPath;
 
         LoadProgram();
     }
@@ -37,5 +39,10 @@ public partial class ProgramView : ContentPage
                 });
             }
         }
+    }
+
+    private void SelectProgram(object sender, EventArgs e)
+    {
+        Preferences.Set("SelectedProgram", programPath);
     }
 }

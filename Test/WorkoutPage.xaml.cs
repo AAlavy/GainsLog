@@ -1,8 +1,10 @@
+using System.Text.Json;
+
 namespace Test;
 
 public partial class WorkoutPage : ContentPage
 {
-
+    private WorkoutProgram program;
     private static System.Timers.Timer workoutTimer;
     private static bool workoutStarted = false;
     private TimeSpan elapsedTime;
@@ -11,6 +13,7 @@ public partial class WorkoutPage : ContentPage
     {
         InitializeComponent();
         StartTimer();
+        DisplayProgram();
     }
 
     private void StartTimer()
@@ -31,6 +34,27 @@ public partial class WorkoutPage : ContentPage
             workoutStarted = true;
         }
     }
+
+    private void DisplayProgram()
+    {
+
+        if (Preferences.ContainsKey("SelectedProgram"))
+        {
+            string json = File.ReadAllText(Preferences.Get("SelectedProgram", ""));
+            program = JsonSerializer.Deserialize<WorkoutProgram>(json);
+
+            WorkoutInProgress.Children.Add(new Label
+            {
+                Text = program.Name,
+                TextColor = Color.FromRgb(0, 0, 0)
+            });
+        }
+        else
+        {
+            throw new Exception("No program was selected");
+        }
+    }
+
 
     private void onStopWorkout(object sender, EventArgs args)
     {

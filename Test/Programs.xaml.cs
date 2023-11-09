@@ -49,7 +49,7 @@ public partial class Programs : ContentPage
             var programTap = new TapGestureRecognizer();
             programTap.Tapped += (s, e) =>
             {
-                showProgram(s, e, program);
+                showProgram(s, e, program, file);
             };
 
             workoutFrame.GestureRecognizers.Add(programTap);
@@ -59,9 +59,9 @@ public partial class Programs : ContentPage
         }
     }
 
-    private async void showProgram(object sender, EventArgs e, WorkoutProgram program)
+    private async void showProgram(object sender, EventArgs e, WorkoutProgram program, string programPath)
     {
-        await Navigation.PushAsync(new ProgramView(program));
+        await Navigation.PushAsync(new ProgramView(program, programPath));
     }
 
 }
