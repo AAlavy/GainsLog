@@ -49,7 +49,7 @@ public partial class Programs : ContentPage
             var programTap = new TapGestureRecognizer();
             programTap.Tapped += (s, e) =>
             {
-                workoutFrame.BackgroundColor = Color.FromRgb(255, 0, 0);
+                showProgram(s, e, program);
             };
 
             workoutFrame.GestureRecognizers.Add(programTap);
@@ -57,6 +57,11 @@ public partial class Programs : ContentPage
             ProgramGrid.Children.Add(workoutFrame);
 
         }
+    }
+
+    private async void showProgram(object sender, EventArgs e, WorkoutProgram program)
+    {
+        await Navigation.PushAsync(new ProgramView(program));
     }
 
 }
