@@ -18,6 +18,7 @@ public partial class Programs : ContentPage
 
         int row = 0;
         int col = 0;
+
         foreach (string file in files)
         {
             string json = File.ReadAllText(file);
@@ -28,8 +29,8 @@ public partial class Programs : ContentPage
                 BorderColor = Color.FromRgb(255, 255, 255),
                 BackgroundColor = Color.FromRgb(0, 0, 0),
                 CornerRadius = 10,
-                HeightRequest = 60,
-                WidthRequest = 60,
+                HeightRequest = 100,
+                WidthRequest = 100,
 
             };
             workoutFrame.Content = (new Label
@@ -38,13 +39,7 @@ public partial class Programs : ContentPage
             });
 
             Grid.SetRow(workoutFrame, row);
-            Grid.SetColumn(workoutFrame, col++);
-
-            if (col == 3)
-            {
-                col = 0;
-                row++;
-            }
+            Grid.SetColumn(workoutFrame, col);
 
             var programTap = new TapGestureRecognizer();
             programTap.Tapped += (s, e) =>
@@ -55,6 +50,13 @@ public partial class Programs : ContentPage
             workoutFrame.GestureRecognizers.Add(programTap);
 
             ProgramGrid.Children.Add(workoutFrame);
+
+            col++;
+            if (col == ProgramGrid.ColumnDefinitions.Count)
+            {
+                col = 0;
+                row++;
+            }
 
         }
     }

@@ -5,11 +5,21 @@
              Title="Programs"
              BackgroundColor="White"
              >
-    <Grid x:Name="ProgramGrid"
-          RowDefinitions="Auto, Auto" 
-          ColumnDefinitions="*, *"
-          RowSpacing="10"
-          ColumnSpacing="10"
-          >
+    <Grid x:Name="ProgramGrid">
+        <Grid.RowDefinitions>
+            <!-- Define your rows here -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Add more RowDefinitions as needed -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!-- Define your columns here -->
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Add more ColumnDefinitions as needed -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Your Frames will be added dynamically here -->
     </Grid>
+
 </ContentPage>
