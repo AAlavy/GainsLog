@@ -10,10 +10,12 @@
             <!-- Define your rows here -->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <!-- Add more RowDefinitions as needed -->
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <!-- Define your columns here -->
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <!-- Add more ColumnDefinitions as needed -->

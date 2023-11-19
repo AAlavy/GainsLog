@@ -9,7 +9,7 @@ public partial class MainPage : ContentPage
 
     private async void onStartWorkout(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new WorkoutPage());
+        await Navigation.PushAsync(new WorkoutDayPicker());
     }
 
     private async void onProgramsPage(object sender, EventArgs e)

@@ -5,7 +5,7 @@
              Title="WorkoutPage"
              BackgroundColor="White"
              >
-    <VerticalStackLayout x:Name="WorkoutInProgress">
+    <VerticalStackLayout x:Name="WorkoutView">
         <Label
             x:Name="workoutTimerDisplay"
             Text="00:00:00"
@@ -14,11 +14,32 @@
             TextColor="Black"
             />
 
+        <Label
+            x:Name="restTimerLabel"
+            Grid.Row="1" 
+            Grid.Column="0"
+            TextColor="Black"
+            />
+
+        <Label
+            x:Name="setLabel"
+            Grid.Row="2" 
+            Grid.Column="0"
+            TextColor="Black"
+            />        
+        
+        <Label
+            x:Name="nextLabel"
+            Grid.Row="3" 
+            Grid.Column="0"
+            TextColor="Black"
+            />
+        
         <ImageButton
             x:Name="stopWorkoutButton"
-            Grid.Row="0"
+            Grid.Row="3"
             Grid.Column="0"
-            Clicked="onStopWorkout"
+            Clicked="StopWorkout"
             Source="stop_icon.png"
             BackgroundColor="Transparent"
             BorderColor="Transparent"

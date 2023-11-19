@@ -22,7 +22,7 @@ public partial class ProgramView : ContentPage
 
     private void LoadProgram()
     {
-        foreach (ProgramDay day in program.Days)
+        foreach (WorkoutDay day in program.Days)
         {
             ViewProgram.Children.Add(new Label
             {
@@ -30,7 +30,7 @@ public partial class ProgramView : ContentPage
                 TextColor = Color.FromRgb(0, 0, 0)
 
             });
-            foreach (ProgramExercise exercise in day.Exercises)
+            foreach (WorkoutExercise exercise in day.Exercises)
             {
                 ViewProgram.Children.Add(new Label
                 {
