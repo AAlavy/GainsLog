@@ -135,7 +135,11 @@ public partial class WorkoutPage : ContentPage
         workoutTimer.Stop();
         workoutStarted = false;
 
-        Navigation.PopAsync();
-        return;
+        WorkoutFinished();
+    }
+
+    private async void WorkoutFinished()
+    {
+        await Navigation.PushAsync(new WorkoutFinished(elapsedTime.ToString(@"hh\:mm\:ss"), day));
     }
 }

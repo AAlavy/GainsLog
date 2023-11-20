@@ -49,12 +49,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Logs\test.json" />
 	  <None Remove="Resources\Programs\Exercises - Copy.json" />
 	  <None Remove="Resources\Programs\Exercises.json" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiAsset Include="Resources\Exercises\Exercises.json" />
+	  <MauiAsset Include="Resources\Logs\test.json" />
 	  <MauiAsset Include="Resources\Programs\*" />
 	</ItemGroup>
 
@@ -64,6 +66,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="CreateProgramPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="LogPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Programs.xaml">
@@ -76,6 +81,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="WorkoutDayPicker.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="WorkoutFinished.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="WorkoutPage.xaml">

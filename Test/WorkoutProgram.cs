@@ -1,7 +1,4 @@
-﻿
-using System.Collections.Generic;
-
-public class WorkoutExercise
+﻿public class WorkoutExercise
 {
     public string Name { get; set; }
     public int Sets { get; set; }
