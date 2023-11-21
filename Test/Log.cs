@@ -2,9 +2,9 @@
 {
     public class Log
     {
-        public DateTime date { get; set; }
-        public string time { get; set; }
-        public string note { get; set; }
+        public DateTime Date { get; set; }
+        public string Time   { get; set; }
+        public string Note { get; set; }
         public List<WorkoutExercise> Workout { get; set; }
     }
 }

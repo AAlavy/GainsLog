@@ -36,17 +36,20 @@ public partial class WorkoutFinished : ContentPage
     private void AddToLogs()
     {
         string folderPath = Path.Combine(AppContext.BaseDirectory, "Resources/Logs");
-        string fileName = DateTime.Now.ToString("ddMMyy_HHmmss");
-        string filePath = Path.Combine(folderPath, fileName);
+        string fileName = DateTime.Now.ToString("ddMMyy_HHm");
+        string filePath = Path.Combine(folderPath, fileName + ".json");
 
         Log logEntry = new();
 
-        logEntry.note = note;
+        logEntry.Note = note;
         logEntry.Workout = workout.Exercises;
-        logEntry.date = DateTime.Today;
-        logEntry.time = workoutTime;
+        logEntry.Date = DateTime.Today;
+        logEntry.Time = workoutTime;
 
-        string json = JsonSerializer.Serialize(logEntry);
+        string json = JsonSerializer.Serialize(logEntry, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
 
         using (FileStream fs = File.Create(filePath))
         {

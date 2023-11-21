@@ -49,15 +49,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Logs\test.json" />
 	  <None Remove="Resources\Programs\Exercises - Copy.json" />
 	  <None Remove="Resources\Programs\Exercises.json" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiAsset Include="Resources\Exercises\Exercises.json" />
-	  <MauiAsset Include="Resources\Logs\test.json" />
 	  <MauiAsset Include="Resources\Programs\*" />
+	  <MauiAsset Include="Resources\Logs\*" />
 	</ItemGroup>
 
 	<ItemGroup>

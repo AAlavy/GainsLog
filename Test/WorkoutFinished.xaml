@@ -15,6 +15,7 @@
         <Entry
             x:Name="Notes"
             Placeholder="Thoughts about the workout?"
+            TextColor="Black"
             TextChanged="HandleNotesChanged"
             />
 
