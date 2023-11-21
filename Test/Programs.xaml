@@ -2,10 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Test.Programs"
-             Title="Programs">
-    <Grid x:Name="ProgramGrid"
-          RowDefinitions="Auto, Auto" 
-          ColumnDefinitions="50*, 50*">
+             Title="Programs"
+             BackgroundColor="White"
+             >
+    <Grid x:Name="ProgramGrid">
+        <Grid.RowDefinitions>
+            <!-- Define your rows here -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Add more RowDefinitions as needed -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!-- Define your columns here -->
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Add more ColumnDefinitions as needed -->
+        </Grid.ColumnDefinitions>
 
+        <!-- Your Frames will be added dynamically here -->
     </Grid>
+
 </ContentPage>

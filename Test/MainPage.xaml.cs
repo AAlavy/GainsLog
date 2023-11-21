@@ -7,14 +7,19 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    private async void onStartWorkout(object sender, EventArgs e)
+    private async void StartWorkout(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new WorkoutPage());
+        await Navigation.PushAsync(new WorkoutDayPicker());
     }
 
-    private async void onProgramsPage(object sender, EventArgs e)
+    private async void ProgramsPageNav(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new ProgramsPage());
+    }
+
+    private async void LogNav(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LogPage());
     }
 
 }

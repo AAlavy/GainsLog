@@ -10,25 +10,23 @@
             VerticalOptions="Center">
 
         <Button 
-            x:Name="workoutStartButton"
             Text="Start Workout" 
             Grid.Row="1" 
             Grid.Column="0"
-            Clicked="onStartWorkout"
+            Clicked="StartWorkout"
             />
 
         <Button
-            x:Name="programsButton"
             Text="Programs"
             Grid.Row="2" 
             Grid.Column="0"
-            Clicked="onProgramsPage"
+            Clicked="ProgramsPageNav"
             />
         <Button
-            x:Name="historyButton"
-            Text="History"
+            Text="Log"
             Grid.Row="3"
             Grid.Column="0"
+            Clicked="LogNav"
             />
 
     </VerticalStackLayout>
