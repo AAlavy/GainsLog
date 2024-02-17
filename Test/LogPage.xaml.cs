@@ -25,7 +25,6 @@ public partial class LogPage : ContentPage
                 Text = logEntry.Date.ToString(),
                 TextColor = Color.FromRgb(0, 0, 0)
             });
-
         }
     }
 }

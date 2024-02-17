@@ -6,6 +6,6 @@
              BackgroundColor="White"
              >
     <VerticalStackLayout x:Name="LogView">
-
+    
     </VerticalStackLayout>
 </ContentPage>

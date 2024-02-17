@@ -4,10 +4,12 @@
              x:Class="Test.MainPage"
              BackgroundColor="White"
              >
+
     <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
+        
 
         <Button 
             Text="Start Workout" 
